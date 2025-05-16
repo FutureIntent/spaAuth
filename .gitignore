@@ -1,0 +1,36 @@
+/Java/spaAuth/HELP.md
+/Java/spaAuth/target/
+/Java/spaAuth/!.mvn/wrapper/maven-wrapper.jar
+/Java/spaAuth/!**/src/main/**/target/
+/Java/spaAuth/!**/src/test/**/target/
+
+### STS ###
+/Java/spaAuth/.apt_generated
+/Java/spaAuth/.classpath
+/Java/spaAuth/.factorypath
+/Java/spaAuth/.project
+/Java/spaAuth/.settings
+/Java/spaAuth/.springBeans
+/Java/spaAuth/.sts4-cache
+
+### IntelliJ IDEA ###
+/Java/spaAuth/.idea
+/Java/spaAuth/*.iws
+/Java/spaAuth/*.iml
+/Java/spaAuth/*.ipr
+
+### NetBeans ###
+/Java/spaAuth/nbproject/private/
+/Java/spaAuth/nbbuild/
+/Java/spaAuth/dist/
+/Java/spaAuth/nbdist/
+/Java/spaAuth/.nb-gradle/
+/Java/spaAuth/build/
+/Java/spaAuth/!**/src/main/**/build/
+/Java/spaAuth/!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+### Docker Volume ###
+/mySQL/data/*

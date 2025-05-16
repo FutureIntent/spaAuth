@@ -1,0 +1,39 @@
+services:
+  my_sql:
+    image: mysql_database
+    build: /mySQL
+    ports:
+      - "3306:3306"
+    networks:
+      - spaAuthNetwork
+    volumes:
+      - ./mySQL/data:/var/lib/mysql
+    env_file: "/mysQL/mySQL.env"
+    restart: always
+  backend:
+    tty: true
+    image: backend_java
+    build: /Java
+    command: /app/projects/spaAuth/mvnw spring-boot:run
+    ports:
+      - "8080:8080"
+    networks:
+      - spaAuthNetwork
+    # volumes:
+    #   - ./Java/spaAuth:/app/projects/spaAuth
+    develop:
+      watch:
+        # - action: rebuild
+        #   path: ./Java/spaAuth/pom.xml
+        #   target: /app/projects/spaAuth/pom.xml
+        - action: sync+restart
+          path: ./Java/spaAuth
+          target: /app/projects/spaAuth
+    env_file: "/Java/spaAuth.env"
+    depends_on:
+      - my_sql
+
+networks:
+  spaAuthNetwork:
+    name: spaAuthNetwork
+    driver: bridge
