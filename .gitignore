@@ -1,3 +1,4 @@
+### Backend ###
 /Java/spaAuth/HELP.md
 /Java/spaAuth/target/
 /Java/spaAuth/!.mvn/wrapper/maven-wrapper.jar
@@ -34,3 +35,32 @@
 
 ### Docker Volume ###
 /mySQL/data/*
+
+### Vite Modules ###
+/ViteReact/ViteReact/.pnpm-store
+/ViteReact/ViteReact/node_modules
+
+# Logs
+/ViteReact/ViteReact/logs
+/ViteReact/ViteReact/*.log
+/ViteReact/ViteReact/npm-debug.log*
+/ViteReact/ViteReact/yarn-debug.log*
+/ViteReact/ViteReact/yarn-error.log*
+/ViteReact/ViteReact/pnpm-debug.log*
+/ViteReact/ViteReact/lerna-debug.log*
+
+/ViteReact/ViteReact/node_modules
+/ViteReact/ViteReact/dist
+/ViteReact/ViteReact/dist-ssr
+/ViteReact/ViteReact/*.local
+
+# Editor directories and files
+/ViteReact/ViteReact/.vscode/*
+/ViteReact/ViteReact/!.vscode/extensions.json
+/ViteReact/ViteReact/.idea
+/ViteReact/ViteReact/.DS_Store
+/ViteReact/ViteReact/*.suo
+/ViteReact/ViteReact/*.ntvs*
+/ViteReact/ViteReact/*.njsproj
+/ViteReact/ViteReact/*.sln
+/ViteReact/ViteReact/*.sw?

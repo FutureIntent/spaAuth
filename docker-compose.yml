@@ -32,6 +32,20 @@ services:
     env_file: "/Java/spaAuth.env"
     depends_on:
       - my_sql
+  vite_react:
+    tty: true
+    image: vite_react
+    build: /ViteReact
+    command: sh -c "pnpm install && pnpm run dev"
+    ports:
+      - "8000:8000"
+    networks:
+      - spaAuthNetwork
+    volumes:
+      - ./ViteReact/ViteReact:/app/ViteReact
+    env_file: "/ViteReact/viteReact.env"
+    depends_on:
+      - my_sql
 
 networks:
   spaAuthNetwork:
