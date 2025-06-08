@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 WORKDIR /app/ViteReact
 
-RUN npm install -g pnpm@latest-10
+RUN npm install --global --force yarn
 
 COPY ./ViteReact .
 
