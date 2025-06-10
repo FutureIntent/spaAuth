@@ -1,4 +1,16 @@
 services:
+  web_server:
+    image: nginx_server
+    build: /webServer
+    ports:
+      - "8080:80"
+    networks:
+      - spaAuthNetwork
+    volumes:
+      - ./webServer/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./webServer/nginx/logs:/var/log/nginx
+    env_file: "/webServer/webServer.env"
+    restart: always
   my_sql:
     image: mysql_database
     build: /mySQL
@@ -16,7 +28,7 @@ services:
     build: /Java
     command: /app/projects/spaAuth/mvnw spring-boot:run
     ports:
-      - "8080:8080"
+      - "8888:8888"
     networks:
       - spaAuthNetwork
     # volumes:
@@ -32,6 +44,7 @@ services:
     env_file: "/Java/spaAuth.env"
     depends_on:
       - my_sql
+      - web_server
   vite_react:
     tty: true
     image: vite_react
@@ -46,6 +59,7 @@ services:
     env_file: "/ViteReact/viteReact.env"
     depends_on:
       - my_sql
+      - web_server
 
 networks:
   spaAuthNetwork:
