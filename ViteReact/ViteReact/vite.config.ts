@@ -12,8 +12,10 @@ export default defineConfig({
     watch: {
       usePolling: true,
     },
+    allowedHosts: ["vite_react"],
     port: 8000,
     strictPort: true,
     host: true
-  }
+  },
+  base: "/vite_react"
 })
