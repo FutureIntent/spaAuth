@@ -64,3 +64,6 @@
 /ViteReact/ViteReact/*.njsproj
 /ViteReact/ViteReact/*.sln
 /ViteReact/ViteReact/*.sw?
+
+# nginx logs
+/webServer/nginx/logs/*
