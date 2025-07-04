@@ -17,5 +17,5 @@ export default defineConfig({
     strictPort: true,
     host: true
   },
-  base: "/vite_react"
+  base: "/frontend"
 })
