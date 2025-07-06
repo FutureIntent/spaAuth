@@ -28,7 +28,7 @@ services:
     tty: true
     image: backend_java
     build: /Java
-    command: /app/projects/spaAuth/mvnw spring-boot:run
+    command: /app/projects/spaAuth/mvnw clean spring-boot:run
     ports:
       - "8888:8080"
     networks:
