@@ -22,7 +22,7 @@ services:
       - spaAuthNetwork
     volumes:
       - ./mySQL/data:/var/lib/mysql
-    env_file: "/mysQL/mySQL.env"
+    env_file: "/mySQL/mySQL.env"
     restart: always
   backend:
     tty: true
