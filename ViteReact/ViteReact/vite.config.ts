@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   preview: {
     port: 8000,
-    strictPort: true
+    strictPort: true,
+    host: true
   },
   server: {
     watch: {
